@@ -33,7 +33,7 @@ public class PowerSet
         }
     	// N stores total number of subsets
         int N = (int)Math.pow(2, S.length);
-        Set<String> set = new HashSet<>();
+        Set<String> set = new HashSet<String>();
 
         // generate each subset one by one
         for (int i = 0; i < N; i++)
