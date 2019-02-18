@@ -67,26 +67,27 @@ public class PowerSet
         }
     }
     
-  
+
     /**
      * Generates a power set from a given array
      * @param S the array from which powerset is to be generated
      * @exception NullPointerException if <code>S</code> 
      * is not initialized
      */
-    public static List<List<Integer>> powerSetImplementation2(int[] myArray) throws NullPointerException
-    {
+    public static List<List<Integer>> powerSetImplementation2(int[] myArray) throws NullPointerException {
 
-        if (myArray == null) return null;
+    	if (myArray == null) {
+    		return null;
+    	}
 
-            Arrays.sort(myArray);
+    	Arrays.sort(myArray);
 
-           List<List<Integer>> res = new ArrayList<>();
-           List<Integer> each = new ArrayList<>();
-           buildSubsets(res, each, 0, myArray);
-           return res;
+    	List<List<Integer>> res = new ArrayList<>();
+    	List<Integer> each = new ArrayList<>();
+    	buildSubsets(res, each, 0, myArray);
+    	return res;
     }
-    
+
     
     /**
      * builds subsets from the given array
